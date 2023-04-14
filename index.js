@@ -11,5 +11,5 @@ app.use('/', function(req,res){
   });
 const server = http.createServer(app);
 const PORT = process.env.PORT || 5000
-server.listen(port);
-console.debug('Server listening on port ' + port);
+server.listen(PORT);
+console.debug('Server listening on port ' + PORT);
