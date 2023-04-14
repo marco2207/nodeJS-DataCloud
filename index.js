@@ -12,7 +12,7 @@ app.use('/', function(req,res){
     res.sendFile(path.join(__dirname+'/express/index.html'));
     //__dirname : It will resolve to your project folder.
   });
-const server = https.createServer(app);
+const server = http.createServer(app);
 
 server.listen(PORT);
 console.debug('Server listening on port ' + PORT);
