@@ -12,7 +12,7 @@ pg.defaults.ssl = true;
 var dbString = process.env.DATABASE_URL;
 var sharedPgClient;
 var client = new pg.Client({
-  connectionString: connectionString,
+  connectionString: dbString,
   ssl: { rejectUnauthorized: false }
 })
 client.connect();
