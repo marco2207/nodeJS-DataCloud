@@ -11,7 +11,10 @@ var bodyParser = require('body-parser');
 pg.defaults.ssl = true;
 var dbString = process.env.DATABASE_URL;
 var sharedPgClient;
-var client = new pg.Client(dbString);
+var client = new pg.Client({
+  connectionString: connectionString,
+  ssl: { rejectUnauthorized: false }
+})
 client.connect();
 
 app.use(bodyParser.urlencoded({extended: false}));
