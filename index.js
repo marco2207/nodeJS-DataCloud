@@ -33,7 +33,7 @@ app.post('/addpg', function(req,res){
         return;
     }
     console.log('@@@ Message added');
-    client.end();
+    //client.end();
   });
 res.redirect('/');
 });
