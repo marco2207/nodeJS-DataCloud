@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addpg', function(req,res){
-  console.log('@@@ data sent by form are: ' + req.Name + ", " + req.Email + ", " + req.Message);
-  var query = "INSERT INTO salesforce.Richieste__c (email__c, name__c, message__c) VALUES (" + "'" + req.Email + "'" + ", " + "'" + req.Name + "'" + ", " + "'" + req.Message + "'" + ")";
+  console.log('@@@ data sent by form are: ' + req.body.Name + ", " + req.body.Email + ", " + req.bodyMessage);
+  var query = "INSERT INTO salesforce.Richieste__c (email__c, name__c, message__c) VALUES (" + "'" + req.body.Email + "'" + ", " + "'" + req.body.Name + "'" + ", " + "'" + req.body.Message + "'" + ")";
 });
  
 // Start the server
