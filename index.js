@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.post('/addpg', function(req,res){
   console.log('@@@ data sent by form are: ' + req.body.Name + ", " + req.body.Email + ", " + req.body.Message);
-  var query = "INSERT INTO salesforce.Richieste__c (email__c, name__c, message__c) VALUES (" + "'" + req.body.Email + "'" + ", " + "'" + req.body.Name + "'" + ", " + "'" + req.body.Message + "'" + ")";
+  var query = "INSERT INTO salesforce.Richieste__c (email__c, Name__c, Messaggio__c) VALUES (" + "'" + req.body.Email + "'" + ", " + "'" + req.body.Name + "'" + ", " + "'" + req.body.Message + "'" + ")";
   console.log("@@@ New message has been added");
   res.send("New employee has been added into the database");
 });
